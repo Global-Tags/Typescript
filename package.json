@@ -1,6 +1,5 @@
 {
   "name": "globaltags.ts",
-  "private": true,
   "version": "1.0.0",
   "description": "A typescript wrapper for the GlobalTag-API",
   "main": "dist/index.js",
