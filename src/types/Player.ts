@@ -2,13 +2,13 @@ import { Routes } from "../util/Routes";
 import GlobalTagAPI, { RequestOptions } from "./GlobalTagAPI";
 
 type PlayerPosition = 'ABOVE' | 'BELOW' | 'LEFT' | 'RIGHT';
-type PlayerBan = {
+export type PlayerBan = {
     active: boolean,
     reason: string | null,
     appealable: boolean
 } | null;
 
-type PlayerData = {
+export type PlayerData = {
     uuid: string,
     tag: string | null,
     position: PlayerPosition,
