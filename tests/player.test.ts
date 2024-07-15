@@ -1,8 +1,8 @@
 import { expect, test } from "bun:test";
-import GlobalTagAPI from "../types/GlobalTagAPI";
+import GlobalTagAPI from "../src/types/GlobalTagAPI";
+import { token } from "./auth";
 
 const uuid = '5b487db8-0f88-46b9-9dc4-d969c857d961';
-const token = '...';
 
 test('get player', async () => {
     const wrapper = new GlobalTagAPI({ url: 'http://localhost:5000' });

@@ -16,6 +16,9 @@
     "labymod",
     "minecraft"
   ],
+  "files": [
+    "src"
+  ],
   "author": "RappyTV",
   "license": "MIT",
   "bugs": {
