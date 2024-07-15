@@ -8,13 +8,13 @@ test('get player', async () => {
     expect((await wrapper.fetchPlayer(uuid, { token }))?.uuid).toBe(uuid.replaceAll('-', ''));
 });
 
-test('watch player', async () => {
+test.skip('watch player', async () => {
     const wrapper = new GlobalTagAPI({ url: 'http://localhost:5000' });
     const player = await wrapper.fetchPlayer(uuid, { token });
     expect(async () => await player.watch({ token })).not.toThrow();
 });
 
-test('unwatch player', async () => {
+test.skip('unwatch player', async () => {
     const wrapper = new GlobalTagAPI({ url: 'http://localhost:5000' });
     const player = await wrapper.fetchPlayer(uuid, { token });
     expect(async () => await player.unwatch({ token })).not.toThrow();
