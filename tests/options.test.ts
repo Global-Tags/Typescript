@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { expect, test } from "bun:test";
 import GlobalTagAPI from "../src/types/GlobalTagAPI";
 
