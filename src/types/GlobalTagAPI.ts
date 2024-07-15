@@ -32,15 +32,17 @@ export default class GlobalTagAPI {
     }
 
     async fetchPlayer(uuid: string, options?: RequestOptions): Promise<Player | null> {
-        try {
-            const response = await this.axios.get(Routes.player(uuid), {
-                headers: {
-                    Authorization: `${options?.overrideAuthMethod ?? this.defaultAuthMethod} ${options?.token}`
-                }
-            });
-            return new Player(this, response.data);
-        } catch {
-            return null;
-        }
+        return new Promise<Player>(async (resolve, reject) => {
+            try {
+                const response = await this.axios.get(Routes.player(uuid), {
+                    headers: {
+                        Authorization: `${options?.overrideAuthMethod ?? this.defaultAuthMethod} ${options?.token}`
+                    }
+                });
+                resolve(new Player(this, response.data));
+            } catch(err) {
+                reject(err?.response?.data?.error || 'An unknown error ocurred.');
+            }
+        });
     }
 }
