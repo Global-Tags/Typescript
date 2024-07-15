@@ -1,5 +1,5 @@
 import { expect, test } from "bun:test";
-import GlobalTagAPI from "../types/GlobalTagAPI";
+import GlobalTagAPI from "../src/types/GlobalTagAPI";
 
 test('using default config', () => {
     const wrapper = new GlobalTagAPI();
