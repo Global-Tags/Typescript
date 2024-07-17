@@ -1,6 +1,6 @@
 {
   "name": "globaltags.ts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A typescript wrapper for the GlobalTag-API",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,8 @@
     "minecraft"
   ],
   "files": [
-    "src"
+    "src",
+    "dist"
   ],
   "author": "RappyTV",
   "license": "MIT",
